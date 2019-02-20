@@ -8,7 +8,15 @@
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/introHCI.css" rel="stylesheet">
-  
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134925820-1"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+
+  	gtag('config', 'UA-134925820-1');
+	</script>
 </head>
 
 <body>
@@ -19,6 +27,9 @@
 		</div>
 
 		<h4>Projects</h4>
+		{{#if viewAlt}}
+			<button class="likeBtn">Like</button>
+		{{else}}
 		{{#each projects}}
 			<div class="project" id="{{id}}">
 				<div class="thumbnail">
@@ -31,6 +42,7 @@
 				</div>
 			</div>
 		{{/each}}
+		{{/if}}
 
 
 	<script src="https://code.jquery.com/jquery.js"></script>

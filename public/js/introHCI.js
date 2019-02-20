@@ -10,4 +10,9 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// your code here
+	$('.likeBtn').click(function() {
+		gtag('event', 'click', {
+			'event_category': 'like'
+		  });
+	});
 }
